@@ -1,0 +1,109 @@
+GEMİNİ YAZITANIMA PROJESİ
+=======================
+
+1. PROJE HAKKINDA
+----------------
+Bu proje, kullanıcıların belgeleri tarayıp dijital ortama aktarmalarını sağlayan, 
+yapay zeka destekli bir belge tarama ve yönetim uygulamasıdır. Uygulama, 
+kullanıcıların belgeleri kolayca tarayıp, düzenleyip, kaydetmelerine ve 
+geçmiş kayıtlarına erişmelerine olanak sağlar.
+
+2. TEMEL ÖZELLİKLER
+------------------
+2.1. Belge Tarama
+    - Kamera ile belge tarama
+    - Otomatik belge kenar algılama
+    - Yapay zeka ile metin tanıma
+    - Tarama kalitesi optimizasyonu
+
+2.2. Belge Yönetimi
+    - PDF ve TXT formatında kaydetme
+    - Belge düzenleme ve düzeltme
+    - Belge paylaşımı
+    - Geçmiş kayıtlara erişim
+
+2.3. Kullanıcı Yönetimi
+    - Kullanıcı hesabı oluşturma
+    - Profil bilgilerini güncelleme
+    - Güvenli giriş sistemi
+
+3. TEKNİK DETAYLAR
+----------------
+3.1. Kullanılan Teknolojiler
+    - Flutter (Mobil uygulama geliştirme)
+    - Firebase (Veritabanı ve kimlik doğrulama)
+    - Google ML Kit (Metin tanıma)
+    - CameraX (Kamera entegrasyonu)
+
+3.2. Veritabanı Yapısı
+    - Kullanıcı bilgileri
+    - Taranan belge kayıtları
+    - Belge meta verileri
+    - Sistem ayarları
+
+4. UYGULAMA AKIŞI
+---------------
+4.1. Başlangıç
+    - Uygulama açılışı
+    - Kullanıcı girişi kontrolü
+    - Sistem durumu kontrolü
+
+4.2. Belge Tarama Süreci
+    - Kamera erişimi kontrolü
+    - Belge tarama
+    - Sonuç önizleme
+    - Kaydetme veya iptal
+
+4.3. Geçmiş Kayıtlar
+    - Kayıt listesi görüntüleme
+    - Kayıt detaylarına erişim
+    - Belge paylaşımı
+    - Kayıt silme
+
+4.4. Ayarlar
+    - Kullanıcı bilgilerini güncelleme
+    - Tema değiştirme
+    - Sistem ayarları
+
+5. HATA YÖNETİMİ
+--------------
+5.1. Kamera Hataları
+    - Erişim izni kontrolü
+    - Donanım uyumluluğu
+    - Bağlantı sorunları
+
+5.2. Kayıt Hataları
+    - Depolama alanı kontrolü
+    - Veritabanı bağlantı sorunları
+    - Dosya formatı hataları
+
+5.3. Sistem Hataları
+    - Uygulama çökme durumları
+    - Bağlantı kopması
+    - Bellek yönetimi
+
+6. GÜVENLİK ÖNLEMLERİ
+-------------------
+6.1. Kullanıcı Güvenliği
+    - Şifreli kimlik doğrulama
+    - Oturum yönetimi
+    - Veri şifreleme
+
+6.2. Veri Güvenliği
+    - Güvenli depolama
+    - Veri yedekleme
+    - Erişim kontrolü
+
+7. GELECEK GELİŞTİRMELER
+----------------------
+7.1. Planlanan Özellikler
+    - Çoklu belge tarama
+    - Gelişmiş metin tanıma
+    - Bulut depolama entegrasyonu
+    - Çevrimdışı mod
+
+7.2. Performans İyileştirmeleri
+    - Tarama hızı optimizasyonu
+    - Bellek kullanımı iyileştirmesi
+    - Ağ trafiği optimizasyonu
+

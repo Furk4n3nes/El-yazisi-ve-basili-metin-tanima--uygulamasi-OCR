@@ -1,0 +1,207 @@
+1. GİRİŞ
+--------
+Bu rapor, el yazısı ile oluşturulan notların ve belgelerin dijital ortama aktarılması, düzenlenmesi ve yönetilmesi amacıyla geliştirilen Gemini Yazı Tanıma Android uygulamasının analizini, kapsamını, teknolojik altyapısını ve işlevsel gereksinimlerini kapsamaktadır. Proje, günümüzün dijitalleşen dünyasında, özellikle eğitim, iş ve kişisel kullanım alanlarında el yazısı ile alınan notların kaybolmasını önlemek, arşivlenmesini kolaylaştırmak ve bilgiye erişimi hızlandırmak için geliştirilmiştir. Kullanıcıların, fiziksel belgelerini ve notlarını kaybetme riskini ortadan kaldıran bu uygulama, aynı zamanda belgelerin güvenli bir ortamda saklanmasını ve gerektiğinde kolayca erişilmesini sağlar. Proje, kullanıcı dostu arayüzü ve modern tasarımı ile her yaştan ve her seviyeden kullanıcıya hitap etmektedir.
+
+1.1 Projenin Amacı ve Kapsamı
+----------------------------
+Projenin temel amacı, kullanıcıların el yazısı ile yazılmış notlarını ve belgelerini hızlı, güvenli ve pratik bir şekilde dijital ortama aktarmalarını sağlamaktır. Uygulama, kamera ile belge tarama, otomatik kenar algılama, yapay zeka ile el yazısı metin tanıma, belge düzenleme, PDF ve metin formatında kaydetme, belge paylaşımı ve geçmiş kayıtlara erişim gibi işlevleri kapsamaktadır. Proje, bireysel ve kurumsal kullanıcıların belge yönetimi ihtiyaçlarını karşılayacak şekilde tasarlanmıştır. Kullanıcılar, uygulama üzerinden yeni not ekleyebilir, mevcut notlarını düzenleyebilir, silebilir ve farklı formatlarda dışa aktarabilirler. Çoklu kullanıcı desteği ile her kullanıcının kendi belgelerine özel erişim sağlanır. Ayrıca, uygulamanın ilerleyen sürümlerinde bulut yedekleme, çoklu dil desteği ve gelişmiş analiz araçları gibi ek özelliklerin de kapsam dahilinde olması planlanmaktadır. Proje, dijitalleşme sürecinde el yazısı belgelerin kaybolmasını önlemeyi, arşivlemeyi kolaylaştırmayı ve bilgiye erişimi hızlandırmayı amaçlamaktadır.
+
+1.3 Tanımlamalar ve Kısaltmalar
+------------------------------
+- OCR: Optik Karakter Tanıma. El yazısı veya basılı metinlerin dijital ortama aktarılması için kullanılan teknolojidir.
+- PDF: Portable Document Format. Belgelerin evrensel olarak paylaşılmasını sağlayan dosya formatıdır.
+- ML Kit: Google Machine Learning Kit. Mobil uygulamalarda makine öğrenimi ve yapay zeka işlevleri sunan bir araçtır.
+- UI: Kullanıcı Arayüzü. Kullanıcıların uygulama ile etkileşime geçtiği görsel ve işlevsel katmandır.
+- AI: Yapay Zeka. İnsan benzeri kararlar alabilen ve öğrenebilen yazılım sistemlerini ifade eder.
+- SQLite: Android yerel veritabanı. Uygulama içi veri saklama ve yönetiminde kullanılır.
+- Gemini API: Google'ın gelişmiş yapay zeka ve doğal dil işleme yetenekleri sunan API'si. El yazısı tanıma ve metin işleme süreçlerinde kullanılmıştır.
+
+2. PROJE PLANI
+--------------
+2.1 Giriş
+--------
+Proje, modern mobil teknolojiler ve yapay zeka destekli OCR çözümleriyle, kullanıcıların el yazısı notlarını kolayca dijitalleştirmesini ve yönetmesini hedeflemektedir. Bu kapsamda, kullanıcıların günlük yaşamda veya iş süreçlerinde oluşturdukları el yazısı notların kaybolmasını önlemek, arşivlenmesini kolaylaştırmak ve dijital ortamda düzenlenebilir hale getirmek amaçlanmıştır. Proje, kullanıcıların belgelerini güvenli bir şekilde saklaması, paylaşması ve gerektiğinde hızlıca bulabilmesi için gelişmiş arama ve filtreleme özellikleri de sunmaktadır.
+
+2.2 Projenin Plan Kapsamı
+-------------------------
+Proje, bireysel ve kurumsal kullanıcıların belge yönetimi ihtiyaçlarını karşılayacak şekilde tasarlanmıştır. Kullanıcılar, uygulama üzerinden yeni not ekleyebilir, mevcut notlarını düzenleyebilir, silebilir ve farklı formatlarda dışa aktarabilirler. Çoklu kullanıcı desteği ile her kullanıcının kendi belgelerine özel erişim sağlanır. Uygulama, kullanıcıların notlarını hızlıca bulabilmesi için gelişmiş arama ve filtreleme seçenekleri sunar. Ayrıca, notların tarih, başlık veya içerik bazında sıralanabilmesi ve toplu olarak yönetilebilmesi de işlevsel gereksinimler arasındadır. Proje, kullanıcıların dijitalleşme sürecinde karşılaşabileceği tüm ihtiyaçları karşılayacak şekilde kapsamlı olarak planlanmıştır.
+
+2.3 Proje Zaman-İş Planı
+------------------------
+Proje, analiz, tasarım, geliştirme, test ve dağıtım aşamalarından oluşmaktadır. Her aşama için ayrıntılı zaman çizelgesi ve iş dağılımı hazırlanmıştır. Analiz aşamasında gereksinimler toplanır ve sistem tasarımı yapılır. Tasarım aşamasında, uygulamanın arayüzü ve veri yapıları detaylandırılır. Geliştirme aşamasında, uygulamanın kodlanması ve entegrasyonu gerçekleştirilir. Test aşamasında, uygulamanın işlevselliği ve güvenliği çeşitli testlerle doğrulanır. Son olarak, dağıtım aşamasında uygulama son kullanıcıya sunulur ve bakım süreci başlar. Her aşama, proje ekibi tarafından düzenli olarak izlenir ve raporlanır.
+
+2.4 Proje Ekip Yapısı
+---------------------
+Proje ekibi; proje yöneticisi, yazılım geliştiriciler, test uzmanları, tasarımcılar ve danışmanlardan oluşmaktadır. Proje yöneticisi, projenin zamanında ve bütçeye uygun şekilde ilerlemesini sağlar. Yazılım geliştiriciler, uygulamanın kodlanmasından ve teknik altyapının oluşturulmasından sorumludur. Test uzmanları, uygulamanın işlevselliğini ve güvenliğini test eder. Tasarımcılar, kullanıcı arayüzünün modern ve kullanıcı dostu olmasını sağlar. Danışmanlar ise, proje sürecinde teknik ve stratejik destek sunar.
+
+2.5 Önerilen Sistemin Teknik Tanımları
+--------------------------------------
+- Android (Kotlin/Java): Uygulamanın temel geliştirme platformu ve programlama dilleri.
+- Jetpack Compose (UI): Modern ve dinamik kullanıcı arayüzü oluşturmak için kullanılan Android kütüphanesi.
+- CameraX (Kamera entegrasyonu): Yüksek kaliteli belge tarama ve otomatik kenar algılama için kullanılır.
+- Google ML Kit (El yazısı OCR): El yazısı metinlerin dijital ortama aktarılması için yapay zeka tabanlı metin tanıma teknolojisi.
+- SQLite (Yerel veritabanı): Kullanıcı verilerinin ve notların güvenli bir şekilde saklanması için kullanılır.
+- Modern Android mimari bileşenleri: Uygulamanın sürdürülebilir ve ölçeklenebilir olmasını sağlar.
+- Güvenlik için veri şifreleme ve biyometrik kimlik doğrulama: Kullanıcı verilerinin gizliliğini ve güvenliğini artırır.
+
+2.6 Kullanılan Özel Geliştirme Araçları ve Ortamları
+----------------------------------------------------
+- Android Studio IDE: Android uygulama geliştirme için resmi entegre geliştirme ortamı.
+- Git ve GitHub: Sürüm kontrolü ve ekip içi işbirliği için kullanılır.
+- Google Firebase (kimlik doğrulama ve analiz): Kullanıcı kimlik doğrulama ve uygulama analizleri için kullanılır.
+- Figma (UI/UX tasarım): Uygulama arayüzü ve kullanıcı deneyimi tasarımı için kullanılır.
+
+2.7 Proje Standartları, Yöntem ve Metodolojiler
+-----------------------------------------------
+- Agile/Scrum proje yönetimi: Proje sürecinin esnek ve hızlı ilerlemesini sağlar.
+- Kodlama standartları ve versiyon kontrolü: Kodun okunabilirliğini ve sürdürülebilirliğini artırır.
+- Test odaklı geliştirme (TDD): Uygulamanın hatasız ve güvenli şekilde geliştirilmesini sağlar.
+
+2.8 Kalite Sağlama Planı
+------------------------
+- Kod incelemeleri: Kodun kalitesini ve güvenliğini artırmak için düzenli olarak yapılır.
+- Otomatik ve manuel testler: Uygulamanın işlevselliği ve güvenliği test edilir.
+- Kullanıcı kabul testleri: Son kullanıcıların uygulamayı test ederek geri bildirimde bulunması sağlanır.
+
+2.9 Konfigürasyon Yönetim Planı
+------------------------------
+- Git ile sürüm kontrolü: Kodun farklı sürümlerinin yönetilmesini sağlar.
+- CI/CD entegrasyonu: Otomatik derleme, test ve dağıtım süreçlerini yönetir.
+
+2.10 Kaynak Yönetim Planı
+------------------------
+- İnsan kaynağı, donanım ve yazılım kaynaklarının etkin yönetimi: Proje kaynaklarının verimli kullanılması sağlanır.
+
+2.11 Eğitim Planı
+----------------
+- Kullanıcılar için uygulama içi rehberler ve eğitim videoları: Kullanıcıların uygulamayı etkin şekilde kullanabilmesi için destek sunar.
+
+2.12 Test Planı
+---------------
+- Birim, entegrasyon ve sistem testleri: Uygulamanın tüm bileşenlerinin doğru çalıştığının doğrulanması.
+- Kullanıcı deneyimi testleri: Uygulamanın kullanıcı dostu olup olmadığının değerlendirilmesi.
+
+2.13 Bakım Planı
+----------------
+- Hata düzeltmeleri ve güncellemeler için düzenli bakım: Uygulamanın sürekli güncel ve güvenli kalmasını sağlar.
+
+3. SİSTEM ÇÖZÜMLEME
+-------------------
+3.1 Mevcut Sistem İncelemesi
+---------------------------
+3.1.1 Örgüt Yapısı: Proje, yazılım geliştirme ekibi ve danışmanlardan oluşan bir yapı ile yürütülmektedir. Ekip, proje yöneticisi liderliğinde, yazılım geliştirme, test, tasarım ve danışmanlık alanlarında uzman kişilerden oluşur.
+3.1.2 İşlevsel Model: Mevcut sistemde el yazısı notların dijitalleştirilmesi manuel ve zaman alıcıdır. Kullanıcılar, notlarını fiziksel olarak saklamakta ve kaybolma riskiyle karşı karşıya kalmaktadır.
+3.1.3 Veri Modeli: Notlar, kullanıcıya özel olarak saklanmakta ve yönetilmektedir. Her kullanıcı, kendi notlarına güvenli bir şekilde erişebilir ve yönetebilir.
+3.1.4 Varolan Yazılım/Donanım Kaynakları: Android cihazlar, kamera, internet bağlantısı gibi temel donanım ve yazılım kaynakları kullanılmaktadır.
+3.1.5 Varolan Sistemin Değerlendirilmesi: Mevcut sistemde otomasyon ve yapay zeka desteği yoktur. Bu nedenle, dijitalleştirme ve arşivleme süreçleri yavaş ve verimsizdir.
+
+3.2 Gereksenen Sistemin Mantıksal Modeli
+----------------------------------------
+3.2.1 Giriş: Yeni sistem, el yazısı notların otomatik olarak dijitalleştirilmesini sağlar. Kullanıcılar, fiziksel notlarını kolayca tarayabilir ve dijital ortama aktarabilir.
+3.2.2 İşlevsel Model: Kamera ile tarama, OCR ile metin tanıma, not düzenleme, kaydetme ve paylaşma gibi temel işlevler sunulmaktadır.
+3.2.3 Genel Bakış: Kullanıcı dostu, hızlı ve güvenli bir uygulama hedeflenmiştir. Uygulama, kullanıcıların ihtiyaçlarına hızlıca cevap verecek şekilde tasarlanmıştır.
+3.2.4 Bilgi Sistemleri/Nesneler: Kullanıcı, Not, Kamera, OCR, Veritabanı gibi temel nesneler ve sistemler uygulamanın çekirdeğini oluşturur.
+3.2.5 İşlevlerin Sıradüzeni: Not ekleme > Tarama > OCR > Düzenleme > Kaydetme/Paylaşma şeklinde bir iş akışı izlenir.
+3.2.6 Başarım Gerekleri: Yüksek doğrulukta OCR, hızlı işlem, güvenli veri saklama ve kullanıcı dostu arayüz temel gereksinimlerdir.
+
+3.3 Arayüz (Modül) Gerekleri
+---------------------------
+3.3.1 Yazılım Arayüzü: Android uygulaması, SQLite veritabanı, ML Kit entegrasyonu ile çalışır.
+3.3.2 Kullanıcı Arayüzü: Modern, sade ve erişilebilir bir tasarım sunar. Farklı yaş ve teknik bilgi seviyesindeki kullanıcılar için uygundur.
+3.3.3 İletişim Arayüzü: Uygulama içi bildirimler, paylaşım modülleri ve kullanıcıya bilgi akışı sağlayan arayüzler içerir.
+3.3.4 Yönetim Arayüzü: Kullanıcı yönetimi, profil ve ayarlar ekranları ile uygulamanın yönetimi sağlanır.
+
+3.4 Belgeleme Gerekleri
+----------------------
+3.4.1 Geliştirme Sürecinin Belgelenmesi: Kod ve proje dokümantasyonu düzenli olarak hazırlanır ve güncellenir.
+3.4.2 Eğitim Belgeleri: Kullanıcı rehberleri, eğitim videoları ve uygulama içi yardım içerikleri ile destek sağlanır.
+3.4.3 Kullanıcı El Kitapları: Uygulamanın tüm işlevlerini ve kullanım senaryolarını detaylı şekilde anlatan kapsamlı el kitabı hazırlanır.
+
+4. TEKNOLOJİK ALTYAPI
+---------------------
+4.1 Yazılım Geliştirme Ortamı
+-----------------------------
+- Android Studio: Android uygulama geliştirme için resmi entegre geliştirme ortamı.
+- Kotlin: Modern, statik tipli bir programlama dili, Android uygulama geliştirmede kullanılır.
+- Java: Android'in temel programlama dillerinden biri, Kotlin ile birlikte kullanılır.
+
+4.2 Kullanılan Kütüphane ve Araçlar
+-----------------------------------
+- CameraX: Android için modern bir kamera uygulama kütüphanesi.
+- ML Kit: Google'ın makine öğrenimi kitleri, el yazısı tanıma için kullanılır.
+- SQLite: Yerel veritabanı yönetimi için kullanılan bir kütüphane.
+
+4.3 Donanım Gereksinimleri
+---------------------------
+- Android işletim sistemine sahip bir mobil cihaz.
+- Kamera özelliği bulunan bir cihaz.
+- İnternet bağlantısı (bazı özellikler için gereklidir).
+
+4.4 Yazılım Gereksinimleri
+---------------------------
+- Android 6.0 (Marshmallow) ve üzeri sürümler.
+- Uygulama için gerekli izinlerin verilmesi (kamera, depolama erişimi vb.).
+
+5. İŞLEVSEL GEREKSİNİMLER
+-------------------------
+5.1 Temel İşlevler
+-----------------
+- Kullanıcıların el yazısı notlarını tarayabilmesi.
+- Taranan notların otomatik olarak dijital metne dönüştürülmesi.
+- Kullanıcıların dijitalleştirilen notları düzenleyebilmesi.
+- Notların PDF veya metin dosyası olarak kaydedilmesi.
+- Geçmişteki notlara erişim ve yönetim imkanı.
+
+5.2 Kullanıcı Yönetimi
+----------------------
+- Kullanıcıların güvenli bir şekilde kayıt olabilmesi ve giriş yapabilmesi.
+- Profil bilgilerini güncelleyebilmesi.
+
+5.3 Güvenlik Gereksinimleri
+----------------------------
+- Kullanıcı verilerinin güvenli bir şekilde saklanması.
+- Uygulama içi veri iletiminin şifrelenmesi.
+- Biyometrik kimlik doğrulama desteği.
+
+6. İŞLEVSEL OLMAYAN GEREKSİNİMLER
+--------------------------------
+6.1 Performans Gereksinimleri
+------------------------------
+- Uygulamanın hızlı açılış ve düşük gecikme süresine sahip olması.
+- Tarama ve tanıma işlemlerinin kısa sürede tamamlanması.
+
+6.2 Kullanılabilirlik Gereksinimleri
+-----------------------------------
+- Uygulamanın kullanıcı dostu ve erişilebilir bir arayüze sahip olması.
+- Farklı yaş ve teknik bilgi seviyesindeki kullanıcılar tarafından kolayca kullanılabilmesi.
+
+6.3 Güvenlik Gereksinimleri
+----------------------------
+- Kullanıcı verilerinin gizliliği ve bütünlüğünün sağlanması.
+- Yetkisiz erişimlere karşı koruma.
+
+7. RİSK ANALİZİ
+---------------
+7.1 Potansiyel Riskler
+----------------------
+- Geliştirme sürecinde karşılaşılabilecek teknik zorluklar.
+- Proje zaman çizelgesine uyum sağlama konusunda yaşanabilecek güçlükler.
+- Kullanıcıların yeni sisteme adaptasyon sürecinde yaşanabilecek sorunlar.
+
+7.2 Risk Yönetimi Stratejileri
+-------------------------------
+- Teknik zorluklar için alternatif çözümler geliştirilmesi.
+- Proje yönetiminde esneklik ve adaptasyon kabiliyeti.
+- Kullanıcı eğitimi ve destek hizmetleri ile adaptasyon sürecinin kolaylaştırılması.
+
+8. SONUÇ
+--------
+Gemini Yazı Tanıma projesi, el yazısı ile oluşturulan notların ve belgelerin dijital ortama aktarılması, düzenlenmesi ve yönetilmesi amacıyla kapsamlı bir çözüm sunmaktadır. Proje, kullanıcıların el yazısı notlarını hızlı, güvenli ve pratik bir şekilde dijitalleştirmelerine olanak tanırken, aynı zamanda gelişmiş arama, filtreleme ve paylaşım özellikleri ile belge yönetimini de kolaylaştırmaktadır. Yapay zeka destekli teknolojiler kullanılarak geliştirilen uygulama, bireysel ve kurumsal kullanıcıların ihtiyaçlarına cevap verecek şekilde tasarlanmıştır. Projenin başarılı bir şekilde hayata geçirilmesi ile birlikte, kullanıcılar el yazısı belgelerini daha verimli bir şekilde yönetebilecek, dijitalleşme sürecinde önemli bir adım atmış olacaklardır.
+
+9. EKLER
+--------
+- Ek A: Proje Zaman Çizelgesi
+- Ek B: Proje Bütçesi
+- Ek C: Ekip Üyeleri ve Görev Dağılımı
+- Ek D: Kullanıcı Senaryoları
+- Ek E: Test Senaryoları ve Sonuçları
